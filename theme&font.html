@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme and Font Controller </title>
+    <script>
+        function darkMode() {
+            document.body.style.color="white";
+            document.body.style.backgroundColor="black";
+        }
+        function lightMode(){
+            document.body.style.color="black";
+            document.body.style.backgroundColor="white";
+        }
+
+        let fontSize=16;
+
+        function incFont(){
+            if (fontSize<40){
+                fontSize = fontSize +2;
+                document.getElementById("heading").style.fontSize=fontSize+"px";
+                document.getElementById("paragraph").style.fontSize=fontSize+"px";
+            }
+            else {
+                alert("Maximum font size reached.");
+            }
+        }
+        function decFont(){
+            if (fontSize>12){
+                fontSize = fontSize -2;
+                document.getElementById("heading").style.fontSize=fontSize+"px";
+                document.getElementById("paragraph").style.fontSize=fontSize+"px";
+            }
+            else {
+                alert("Minimum font size reached.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="heading" align="center">Welcome to the website!</h1>
+    <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nisi perspiciatis consequatur quod ut eveniet debitis laboriosam nam eligendi. Numquam beatae, ducimus a earum iste culpa cupiditate dolor omnis alias!</p>
+    <button onclick="darkMode()">Dark Mode</button>
+    <button onclick="lightMode()">Light Mode</button>
+    <button onclick="incFont()">Increase Font Size </button>
+    <button onclick="decFont()">Decrease Font Size</button>
+
+</body>
+</html>
